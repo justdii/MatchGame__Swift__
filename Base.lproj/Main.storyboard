@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Match__App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="NJG-hM-hDY">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kwG-U5-xSH">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOW-K3-JNv">
+                                        <rect key="frame" x="145" y="0.0" width="190" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="190" id="L8b-4Q-oOw"/>
+                                            <constraint firstAttribute="height" constant="30" id="umg-Sf-shi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="L8b-4Q-oOw"/>
+                                                <exclude reference="umg-Sf-shi"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="L8b-4Q-oOw"/>
+                                                <include reference="umg-Sf-shi"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ddx-bL-fiI">
+                                        <rect key="frame" x="0.0" y="30" width="480" height="290"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zDI-Ca-Qii">
+                                            <size key="itemSize" width="158" height="204"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="CardCell" id="8R8-HF-fli" customClass="CardCollectionViewCell" customModule="Match__App" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="30" width="158" height="204"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="204"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card10" translatesAutoresizingMaskIntoConstraints="NO" id="IHU-KI-IjL" userLabel="Front Image View">
+                                                            <rect key="frame" x="0.0" y="0.0" width="158" height="222"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="hMd-Cw-NLX">
+                                                            <rect key="frame" x="0.0" y="0.0" width="158" height="222"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="IHU-KI-IjL" secondAttribute="trailing" id="Fnw-7r-Buj"/>
+                                                    <constraint firstAttribute="bottom" secondItem="IHU-KI-IjL" secondAttribute="bottom" id="T41-zh-0K8">
+                                                        <variation key="widthClass=compact" constant="-9.5"/>
+                                                    </constraint>
+                                                    <constraint firstItem="IHU-KI-IjL" firstAttribute="leading" secondItem="8R8-HF-fli" secondAttribute="leading" id="hTa-gG-CWA"/>
+                                                    <constraint firstItem="hMd-Cw-NLX" firstAttribute="leading" secondItem="8R8-HF-fli" secondAttribute="leading" id="lv5-P1-wB6"/>
+                                                    <constraint firstItem="hMd-Cw-NLX" firstAttribute="top" secondItem="8R8-HF-fli" secondAttribute="top" id="pCC-27-Phd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hMd-Cw-NLX" secondAttribute="trailing" id="qF1-4b-hGB"/>
+                                                    <constraint firstItem="IHU-KI-IjL" firstAttribute="top" secondItem="8R8-HF-fli" secondAttribute="top" id="uFq-km-dRZ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="hMd-Cw-NLX" secondAttribute="bottom" id="x6K-q5-dCT">
+                                                        <variation key="widthClass=compact" constant="-9.5"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <size key="customSize" width="158" height="204"/>
+                                                <connections>
+                                                    <outlet property="backImageView" destination="hMd-Cw-NLX" id="3Mj-Rb-q8g"/>
+                                                    <outlet property="frontImageView" destination="IHU-KI-IjL" id="prl-Sy-hS0"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ddx-bL-fiI" firstAttribute="width" secondItem="kwG-U5-xSH" secondAttribute="width" id="gBu-4e-Rhk"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="ZOW-K3-JNv"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="gBu-4e-Rhk"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" axis="vertical">
+                                    <mask key="subviews">
+                                        <include reference="ZOW-K3-JNv"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="gBu-4e-Rhk"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NJG-hM-hDY" secondAttribute="trailing" id="Pxb-JZ-nc2"/>
+                            <constraint firstAttribute="bottom" secondItem="NJG-hM-hDY" secondAttribute="bottom" id="Pzw-y9-Veg"/>
+                            <constraint firstItem="kwG-U5-xSH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="i3F-Lc-GYt"/>
+                            <constraint firstItem="kwG-U5-xSH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mPa-WI-SDx"/>
+                            <constraint firstItem="kwG-U5-xSH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="okd-2T-Wqq"/>
+                            <constraint firstItem="NJG-hM-hDY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pxp-yq-dGw"/>
+                            <constraint firstItem="NJG-hM-hDY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="woE-4w-5m1"/>
+                            <constraint firstItem="kwG-U5-xSH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wyf-TX-Xvz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="i3F-Lc-GYt"/>
+                                <exclude reference="mPa-WI-SDx"/>
+                                <exclude reference="okd-2T-Wqq"/>
+                                <exclude reference="wyf-TX-Xvz"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="i3F-Lc-GYt"/>
+                                <include reference="mPa-WI-SDx"/>
+                                <include reference="okd-2T-Wqq"/>
+                                <include reference="wyf-TX-Xvz"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Ddx-bL-fiI" id="OsO-Fr-olQ"/>
+                        <outlet property="timerLabel" destination="ZOW-K3-JNv" id="Y6E-XF-uEo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="158" height="224"/>
+        <image name="background" width="736" height="414"/>
+        <image name="card10" width="158" height="224"/>
+    </resources>
+</document>
